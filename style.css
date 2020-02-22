@@ -1,0 +1,120 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+
+  display: grid;
+  justify-items: stretch;
+  justify-content: stretch;	
+}
+
+.greetings {
+  margin-top: 150px;
+  margin-bottom: 100px;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.highlight {
+  color: white;
+  background-color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: blanchedalmond;
+  background-color: orangered;
+}
+
+a:hover {
+  background-color: orange;
+  color: white;
+}
+
+.misc {
+  display: grid;
+  grid-template-columns: 2fr 150px 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  '. p l'
+  '. p l';
+
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+}
+
+.misc span {
+  text-align: left;
+  margin-left: 40px;
+}
+
+img {
+  width: 150px;
+}
+
+.photo {
+  grid-area: p;
+}
+
+.links {
+  grid-area: l;
+  margin-left: 30px;
+  width: 270px;
+}
+
+td {
+  padding: 10px;
+}
+
+@media (max-width: 780px) {
+  .wrapper {
+    font-size: 16px;
+  }
+
+  .greetings {
+    margin-top: 100px;
+  margin-bottom: 50px;
+  }
+
+  .misc {
+    font-size: 14px;
+    grid-template-columns: 2fr 100px 2fr;
+    grid-template-areas:
+    '. p .'
+    'l l l';
+    justify-items: center;
+  }
+
+  img {
+    width: 100px;
+  }
+
+  .links {
+    width: 200px;
+  }
+
+  td:first-child {
+    width: 30px;
+  }
+}
+
+@media (max-width: 440px) {
+  .wrapper {
+    font-size: 12px;
+  }
+
+  .misc {
+    font-size: 10px;
+  }
+}
