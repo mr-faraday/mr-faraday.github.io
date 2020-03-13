@@ -10,7 +10,7 @@ body {
 
 .wrapper {
   font-family: 'Raleway', sans-serif;
-  font-size: 24px;
+  font-size: calc(700px/100 * 3.5);
 
   display: grid;
   justify-items: stretch;
@@ -33,6 +33,7 @@ a {
   text-decoration: none;
   color: blanchedalmond;
   background-color: orangered;
+  transition: all 0.2s;
 }
 
 a:hover {
@@ -51,7 +52,7 @@ a:hover {
   justify-content: center;
   align-items: center;
 
-  font-size: 16px;
+  font-size: 0.7em;
 }
 
 .misc span {
@@ -78,17 +79,12 @@ td {
 }
 
 @media (max-width: 780px) {
-  .wrapper {
-    font-size: 16px;
-  }
-
   .greetings {
     margin-top: 100px;
-  margin-bottom: 50px;
+    margin-bottom: 50px;
   }
 
   .misc {
-    font-size: 14px;
     grid-template-columns: 2fr 100px 2fr;
     grid-template-areas:
     '. p .'
@@ -109,12 +105,8 @@ td {
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 700px) {
   .wrapper {
-    font-size: 12px;
-  }
-
-  .misc {
-    font-size: 10px;
+    font-size: 3.5vw;
   }
 }
